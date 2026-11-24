@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anagai Bakes | Fresh Cakes in Anagaputhur</title>
+<meta name="description" content="Fresh cakes, puffs and snacks baked daily. Order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ===== CHANGE COLORS HERE FOR EACH CLIENT ===== */
+:root{
+  --plum:#2b1b3d; --pink:#f4a6c0; --pista:#c5dcae; --butter:#ffe9a8; --white:#fffdfb;
+  --head:'Baloo 2',system-ui,sans-serif; --body:'Nunito',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--plum);background:var(--white);line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+h1,h2,h3{font-family:var(--head);line-height:1.15}
+h2{font-size:2rem;margin-bottom:24px}
+
+/* Header */
+header{position:sticky;top:0;background:var(--white);border-bottom:2px solid var(--plum);z-index:10}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:12px;padding-bottom:12px;flex-wrap:wrap;gap:8px}
+.logo{font-family:var(--head);font-weight:800;font-size:1.4rem;text-decoration:none}
+nav a{margin-left:16px;text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline}
+
+/* Buttons */
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--plum)}
+.btn-main{background:var(--plum);color:var(--white)}
+.btn-alt{background:var(--butter)}
+
+/* Hero */
+.hero{background:var(--pink)}
+.hero .wrap{display:grid;gap:32px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,8vw,4.2rem);font-weight:800}
+.hero p{font-size:1.15rem;margin:16px 0 28px;max-width:46ch}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-img{aspect-ratio:1;border-radius:50%;background:var(--butter);border:2px solid var(--plum);display:grid;place-items:center;font-size:5rem}
+@media(min-width:760px){.hero .wrap{grid-template-columns:1.3fr 1fr}}
+
+/* Products */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.item{border:2px solid var(--plum);border-radius:20px;overflow:hidden;background:var(--white)}
+.item .pic{height:150px;display:grid;place-items:center;font-size:3.2rem;background:var(--pista)}
+.item:nth-child(even) .pic{background:var(--butter)}
+.item div.info{padding:16px}
+.item h3{font-size:1.25rem}
+.price{font-weight:600;margin-top:4px}
+
+/* About + reviews */
+.about{background:var(--pista)}
+.about p{max-width:60ch;font-size:1.1rem}
+.reviews{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+blockquote{border-left:6px solid var(--pink);padding:4px 0 4px 16px}
+blockquote cite{display:block;margin-top:6px;font-weight:600;font-style:normal}
+
+/* Gallery */
+.gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.gallery div{aspect-ratio:1;border-radius:16px;background:var(--pink);display:grid;place-items:center;font-size:2rem;border:2px solid var(--plum)}
+.gallery div:nth-child(3n){background:var(--butter)}
+.gallery div:nth-child(3n+1){background:var(--pista)}
+
+/* Contact */
+.contact{background:var(--plum);color:var(--white)}
+.contact .wrap{display:grid;gap:32px}
+.contact a{color:var(--butter)}
+.map{border-radius:20px;overflow:hidden;min-height:240px;background:#fff}
+.map iframe{width:100%;height:100%;min-height:240px;border:0}
+@media(min-width:760px){.contact .wrap{grid-template-columns:1fr 1fr}}
+footer{padding:20px 0;text-align:center;font-size:.9rem}
+
+/* Floating WhatsApp button */
+.wa{position:fixed;right:16px;bottom:16px;background:#25d366;color:#10331c;font-weight:700;padding:14px 20px;border-radius:999px;text-decoration:none;border:2px solid var(--plum);z-index:20}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <!-- CHANGE: shop name -->
+    <a class="logo" href="#home">Anagai Bakes</a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <!-- CHANGE: headline, line, phone number (use country code, no + or spaces) -->
+      <h1>Fresh cakes, baked daily in Anagaputhur</h1>
+      <p>Birthday cakes, puffs and tea-time snacks, made fresh every morning. Order today, pick up or get it delivered nearby.</p>
+      <div class="btns">
+        <a class="btn btn-main" href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20order">Order on WhatsApp</a>
+        <a class="btn btn-alt" href="tel:+919999999999">Call now</a>
+      </div>
+    </div>
+    <!-- CHANGE: replace the emoji with a real <img src="photo.jpg" alt="..."> -->
+    <div class="hero-img" aria-hidden="true">🎂</div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>What we bake</h2>
+    <div class="grid">
+      <!-- CHANGE: products, prices, photos -->
+      <article class="item"><div class="pic" aria-hidden="true">🍰</div><div class="info"><h3>Custom birthday cake</h3><p class="price">From ₹600 per kg</p></div></article>
+      <article class="item"><div class="pic" aria-hidden="true">🥐</div><div class="info"><h3>Butter puff</h3><p class="price">₹20 each</p></div></article>
+      <article class="item"><div class="pic" aria-hidden="true">🧁</div><div class="info"><h3>Cupcakes (box of 6)</h3><p class="price">₹240</p></div></article>
+      <article class="item"><div class="pic" aria-hidden="true">🍞</div><div class="info"><h3>Fresh bread loaf</h3><p class="price">₹45</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>About us</h2>
+    <!-- CHANGE: 2-3 lines about the real shop -->
+    <p>We are a family bakery serving Anagaputhur for over 10 years. Everything is baked fresh each morning with real butter and no shortcuts.</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2>What customers say</h2>
+    <div class="reviews">
+      <!-- CHANGE: use real Google Maps reviews -->
+      <blockquote>Ordered a cake for my sister's birthday. It was soft and delivered on time.<cite>Priya</cite></blockquote>
+      <blockquote>The best puffs in the area. Always fresh.<cite>Karthik</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <h2>Gallery</h2>
+    <!-- CHANGE: replace each div with <img src="..." alt="..."> -->
+    <div class="gallery" aria-hidden="true"><div>🎂</div><div>🥧</div><div>🍩</div><div>🍪</div><div>🥖</div><div>🍮</div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Visit or order</h2>
+      <!-- CHANGE: address, hours, phone -->
+      <p><strong>Address:</strong> Main Road, Anagaputhur, Chennai</p>
+      <p><strong>Hours:</strong> Daily, 7 AM to 9 PM</p>
+      <p><strong>Phone:</strong> <a href="tel:+919999999999">+91 99999 99999</a></p>
+      <p style="margin-top:20px"><a class="btn btn-alt" href="https://wa.me/919999999999">Message on WhatsApp</a></p>
+    </div>
+    <!-- CHANGE: Google Maps > Share > Embed a map > paste the iframe here -->
+    <div class="map"><iframe title="Shop location" loading="lazy" src="https://www.google.com/maps?q=Anagaputhur,Chennai&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Anagai Bakes. Website by Vishwa P.</div>
+</footer>
+
+<a class="wa" href="https://wa.me/919999999999" aria-label="Chat on WhatsApp">WhatsApp</a>
+</body>
+</html>
